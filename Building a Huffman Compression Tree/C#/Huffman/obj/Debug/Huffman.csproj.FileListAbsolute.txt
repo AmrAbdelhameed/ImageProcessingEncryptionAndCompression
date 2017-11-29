@@ -1,0 +1,16 @@
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\bin\Debug\Huffman.exe
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\bin\Debug\Huffman.pdb
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\obj\Debug\Huffman.MainForm.resources
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\obj\Debug\Huffman.Properties.Resources.resources
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\obj\Debug\Huffman.csproj.GenerateResource.Cache
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\obj\Debug\Huffman.exe
+C:\Users\Pate\Documents\Visual Studio 2008\Projects\Huffman\Huffman\obj\Debug\Huffman.pdb
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\obj\Debug\Huffman.exe
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\obj\Debug\Huffman.pdb
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\bin\Debug\Huffman.exe
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\bin\Debug\Huffman.pdb
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\obj\Debug\Huffman.csprojResolveAssemblyReference.cache
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\obj\Debug\Huffman.MainForm.resources
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\obj\Debug\Huffman.Properties.Resources.resources
+D:\_FCIS\Sna 3\Semester 1\Algorithms Analysis and Design\Project\Building a Huffman Compression Tree\C#\Huffman\obj\Debug\Huffman.csproj.GenerateResource.Cache

@@ -33,10 +33,7 @@ namespace ImageQuantization
 
         private void btnGaussSmooth_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 8; ++i)
-            {
-                EncryptionImageMatrix = ImageOperations.EncryptImage(ImageMatrix);
-            }
+            EncryptionImageMatrix = ImageOperations.EncryptImage(ImageMatrix, 6, "10001111");
             ImageOperations.DisplayImage(ImageMatrix, pictureBox2);
 
           //  double sigma = double.Parse(txtGaussSigma.Text);
@@ -46,7 +43,7 @@ namespace ImageQuantization
 
         private void button1_Click(object sender, EventArgs e)
         {
-            EncryptionImageMatrix = ImageOperations.EncryptImage(EncryptionImageMatrix);
+            EncryptionImageMatrix = ImageOperations.EncryptImage(EncryptionImageMatrix, 6, "10001111");
             ImageOperations.DisplayImage(EncryptionImageMatrix, pictureBox2);
         }
     }

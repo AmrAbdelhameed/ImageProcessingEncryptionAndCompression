@@ -12,12 +12,16 @@ namespace ImageQuantization
     class LFSR
     {
         bool[] bits;
+        int pos;
+        String seed;
 
-        public LFSR(int bitCount, string seed)
+        public LFSR(string seed, int pos)
         {
-            bits = new bool[bitCount];
+            this.pos = pos;
+            this.seed = seed;
+            bits = new bool[seed.Length];
 
-            for (int i = 0; i < bitCount; i++)
+            for (int i = 0; i < seed.Length; i++)
                 bits[i] = seed[i] == '1' ? true : false;
 
         }
@@ -36,13 +40,15 @@ namespace ImageQuantization
 
         public void Shift()
         {
-            bool bnew = (bits[bits.Length - 1] ^ bits[bits.Length - 2]);
+            for (int j = 0; j < seed.Length; ++j) { 
+                bool bnew = (bits[bits.Length - 1] ^ bits[pos]);
 
-            for (int i = bits.Length - 1; i > 0; i--)
-            {
-                bits[i] = bits[i - 1];
+                for (int i = bits.Length - 1; i > 0; --i)
+                {
+                    bits[i] = bits[i - 1];
+                }
+                bits[0] = bnew;
             }
-            bits[0] = bnew;
         }
     }
 }

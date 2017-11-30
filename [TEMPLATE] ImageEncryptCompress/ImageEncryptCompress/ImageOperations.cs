@@ -244,26 +244,14 @@ namespace ImageQuantization
 
             return Filtered;
         }
-        public static string Reverse(string s)
+
+        public static String FindValues(int pos, String Data)
         {
-            char[] charArray = s.ToCharArray();
-            Array.Reverse(charArray);
-            return new string(charArray);
-        }
-        public static String FindValues(byte valueByte)
-        {
-            String BinaryData = Convert.ToString(System.Convert.ToInt32(valueByte), 2);
+            //String BinaryData = Convert.ToString(System.Convert.ToInt32(valueByte), 2);
+            
+            LFSR a = new LFSR(Data, pos);
 
-            BinaryData = Reverse(BinaryData);
-            while (BinaryData.Length < 8)
-            {
-                BinaryData += "0";
-            }
-            BinaryData = Reverse(BinaryData);
-
-            LFSR a = new LFSR(BinaryData.Length, BinaryData);
-
-            for (int i = 1; i < BinaryData.Length; ++i)
+            for (int i = 1; i < Data.Length; ++i)
             {
                 a.Shift();
             }
@@ -272,20 +260,21 @@ namespace ImageQuantization
 
             return temp;
         }
-        public static RGBPixel FindKey(byte red, byte green, byte blue)
+
+        public static RGBPixel FindKey(byte red, byte green, byte blue, int pos, String Data)
         {
-            byte Newred = System.Convert.ToByte(FindValues(red));
-            byte Newgreen = System.Convert.ToByte(FindValues(green));
-            byte Newblue = System.Convert.ToByte(FindValues(blue));
+            byte NewS = System.Convert.ToByte(FindValues(pos, Data));
 
             RGBPixel rgb;
-            rgb.red = Newred;
-            rgb.green = Newgreen;
-            rgb.blue = Newblue;
+
+            rgb.red = (byte)(red ^ NewS);
+            rgb.green = (byte)(green ^ NewS);
+            rgb.blue = (byte)(blue ^ NewS);
 
             return rgb;
         }
-        public static RGBPixel[,] EncryptImage(RGBPixel[,] Matrix)
+
+        public static RGBPixel[,] EncryptImage(RGBPixel[,] Matrix, int pos, String Data)
         {
             int Width = GetWidth(Matrix);
             int Height = GetHeight(Matrix);
@@ -294,7 +283,7 @@ namespace ImageQuantization
             {
                 for (int j = 0; j < Width; ++j)
                 {
-                    RGBPixel rgb = FindKey(Matrix[i, j].red, Matrix[i, j].green, Matrix[i, j].blue);
+                    RGBPixel rgb = FindKey(Matrix[i, j].red, Matrix[i, j].green, Matrix[i, j].blue, pos, Data);
                     Matrix[i, j] = rgb;
                 }
             }
